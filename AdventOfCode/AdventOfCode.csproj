@@ -18,4 +18,8 @@
       <PackageReference Include="System.IO.Abstractions" Version="21.2.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Day2\" />
+    </ItemGroup>
+
 </Project>
