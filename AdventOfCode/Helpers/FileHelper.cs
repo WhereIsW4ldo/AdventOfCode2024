@@ -26,7 +26,7 @@ public class FileHelper
 
     public async Task ReadFilePerLine(string fileName, Action<string> action)
     {
-        await using var fileStream = _fileSystem.File.OpenRead(fileName);
+        await using var fileStream = _fileSystem.File.OpenRead(_fileSystem.Path.GetFullPath(fileName));
         using var streamReader = new StreamReader(fileStream);
         
         while (await streamReader.ReadLineAsync() is { } line)

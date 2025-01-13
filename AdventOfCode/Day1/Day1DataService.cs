@@ -2,14 +2,14 @@ using AdventOfCode.Day1.DTO;
 
 namespace AdventOfCode.Day1;
 
-public static class DataService
+public class Day1DataService
 {
-    public static int GetResultPart1(FileData fileData)
+    public int GetResultPart1(FileData fileData)
     {
         return fileData.LeftData.Select((left, right) => Math.Abs(left - fileData.RightData[right])).Sum();
     }
 
-    public static int GetResultPart2(FileData fileData)
+    public int GetResultPart2(FileData fileData)
     {
         var result = 0;
 
