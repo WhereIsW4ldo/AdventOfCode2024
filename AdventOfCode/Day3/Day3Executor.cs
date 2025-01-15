@@ -18,6 +18,6 @@ public class Day3Executor : IExecutor
 
     public async Task<int> ExecutePart2Async(string filePath)
     {
-        throw new NotImplementedException();
+        return await _fileParser.ParseFilePart2(filePath);
     }
 }
