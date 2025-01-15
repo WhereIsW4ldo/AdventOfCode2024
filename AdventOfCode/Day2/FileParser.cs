@@ -16,7 +16,7 @@ public class FileParser
     {
         var correctLines = 0;
         
-        await _fileHelper.ReadFilePerLine(fileName, line =>
+        await _fileHelper.ReadFilePerLineAsync(fileName, line =>
         {
             if (IsLineSafe(line, false))
             {
@@ -31,7 +31,7 @@ public class FileParser
     {
         var correctLines = 0;
         
-        await _fileHelper.ReadFilePerLine(fileName, line =>
+        await _fileHelper.ReadFilePerLineAsync(fileName, line =>
         {
             if (IsLineSafe(line, true))
             {

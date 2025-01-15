@@ -19,7 +19,7 @@ public class FileParser
         var leftNumbers = new List<int>();
         var rightNumbers = new List<int>();
         
-        await _fileHelper.ReadFilePerLine(fileName, line =>
+        await _fileHelper.ReadFilePerLineAsync(fileName, line =>
         {
             var numbers = line
                 .Split(' ')

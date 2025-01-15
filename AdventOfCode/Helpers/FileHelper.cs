@@ -12,11 +12,11 @@ public class FileHelper
         _fileSystem = fileSystem;
     }
     
-    public async Task<string> ReadFile(string fileName)
+    public async Task<string> ReadFileAsync(string fileName)
     {
         var contentBuilder = new StringBuilder();
 
-        await ReadFilePerLine(fileName, s =>
+        await ReadFilePerLineAsync(fileName, s =>
         {
             contentBuilder.Append(s);
         });
@@ -24,7 +24,7 @@ public class FileHelper
         return contentBuilder.ToString();
     }
 
-    public async Task ReadFilePerLine(string fileName, Action<string> action)
+    public async Task ReadFilePerLineAsync(string fileName, Action<string> action)
     {
         await using var fileStream = _fileSystem.File.OpenRead(_fileSystem.Path.GetFullPath(fileName));
         using var streamReader = new StreamReader(fileStream);
