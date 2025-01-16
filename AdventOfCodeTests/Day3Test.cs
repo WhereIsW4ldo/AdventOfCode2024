@@ -36,7 +36,7 @@ public class Day3Test
     public async Task Day3Test_Part2_GivenExampleFile_ReturnsExampleSolution()
     {
         // Arrange
-        _fileSystem.AddFile("input.txt", new MockFileData("xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))"));
+        _fileSystem.AddFile("input.txt", new MockFileData("xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"));
         
         // Act
         var result = await _executor.ExecutePart2Async("input.txt");
